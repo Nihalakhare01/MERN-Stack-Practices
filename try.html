@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .nav1{
+            list-style: none;
+            padding: 20px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .nav1 li {
+            font-size: 19px;
+            border-bottom: 1px #ddd dotted; 
+            line-height: 2.4em;
+        }
+
+        .nav1 li a{
+            text-decoration: none;
+            color: black;
+        }
+        .nav1 li:last-child{
+            border: none;
+        }
+
+        .n2{
+            width:500px;
+            float: right;
+        }
+        
+
+        .nav2{
+            list-style:none;
+            background-color: #4c6ca0;
+            margin: 2px;
+            border-radius: 10px;
+            overflow: auto;
+
+        }
+
+        .nav2 li {    
+           
+            float: right;
+        }
+
+        .nav2 li a{
+            display: block;
+            color: #ddd;
+            padding-right: 60px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            text-decoration: none;
+        }
+
+        .nav2 li a:hover{
+            background-color:#3758a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="n2">
+        <ul class="nav2">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="n1">
+        <ul class="nav1">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>

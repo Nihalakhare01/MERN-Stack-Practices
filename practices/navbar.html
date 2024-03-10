@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .nav1{
+            list-style: none;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            min-height: 190px;
+            margin: 20px 20px;
+            padding: 20px;
+        }
+
+        .nav1 li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav1 li{
+            font-size: 18px;
+            line-height: 2.4em;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .nav1 li:last-child{
+            border: none;
+        }
+
+        .nav1 li a:hover{
+                font-size: 25px;
+                transition: all .2s ease-in-out;
+                padding-left: 20px ;
+                float: left;
+                padding-right: 20px;
+        }
+        
+        .n1:hover{
+            zoom: 1.1;
+        }
+
+        .nav2{
+            list-style: none;
+            background-color: #4c6ca0;
+            margin: 2px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .nav2 li{
+            float: left;
+        }
+
+        .nav2 li a{
+            display: block;
+            color: #ddd;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .nav2 li a:hover{
+            background-color:#375e8b;
+            color: white;
+            zoom: 1.1;
+            transition: all .2s ease-in-out;
+        }
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="n2">
+        <ul class="nav2">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="n1">
+        <ul class="nav1">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>

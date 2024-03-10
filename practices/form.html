@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        
+        body{
+            background-color: #344a72;
+        }
+
+        .conatin1{
+            position: relative;
+            max-width: 330px;
+        }
+
+        .container{
+            background-color: #fff;
+            position: relative;
+            max-width: 330px;
+            margin: 100px auto;
+            border-radius: 10px;
+        }
+
+        .head{
+            position: relative;
+            left:29%;
+            padding-top: 20px;
+            padding: center;
+        }
+
+        .head h6{
+            position: relative;
+            padding-top: 10px;
+            right: 12%;
+            font-size: 16px;
+        }
+
+        .head h1{
+            position: relative;
+            right: -2%;
+            font-size: 35px;
+           
+        }
+
+        .contain{
+            padding : 0px 30px 30px 30px;
+        }
+
+        input,label{
+            display: block;
+            width: 250px;
+        }
+        
+        input{
+            height: 30px;
+        }
+        
+        div{
+            padding-bottom: 10px;
+        }
+
+        .btn{
+            padding-top: 10px;
+        }
+
+        .policy{
+            padding-left: 15px;
+            padding-bottom: 15px;
+        }
+
+
+        #btn1{
+            background-color: #49c1a2;
+            width: 250px;
+            border-radius: 6px;
+            border: none;
+            font-size: 10px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .policy a{
+            text-decoration: none;
+            padding-left: 18px;
+        }
+
+        .policy p{
+            padding-bottom: 3px;
+        }
+
+        .footer{
+            position: relative;
+            bottom:90px;
+            left: 42%;
+        }
+
+        .footer a{
+            color:  #49c1a2;
+            text-decoration: none;
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="contain1">
+    <div class="container"> 
+        <div class="conatin1">
+            <div class="head">
+                <h1>Sign Up</h1>
+                <h6>it's free and only takes one minute</h6>
+            </div>
+        </div> 
+        <div class="contain">
+            <div class="firstname">
+                <label for="fname">First Name</label>
+                <input type="text"  id="fname">
+            </div>
+            <div class="lastname">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname">
+            </div>
+            <div class="mail">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="pass">
+                <label for="pass">Password</label>
+                <input type="password" id="pass">
+            </div>
+            <div class="cpass">
+                <label for="cpass">Confirm Password</label>
+                <input type="password" id="cpass">
+            </div>
+            <div class="btn">
+                <input type="button" value="submit"  id="btn1"> </input>
+            </div>
+        </div>   
+        <div class="policy">
+            <p>By clicking the sign up button,you agree to our
+                 <a href="#">Terms & Condition <span>and</span> privacy policy</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Already have and Account?<a href="#"> Login Here</a></p>
+    </div>
+</div>
+    
+</body>
+</html>

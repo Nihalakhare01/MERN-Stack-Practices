@@ -49,6 +49,7 @@ img{
     position: fixed;
     top: 0px;
     padding:0 30px;
+    position: relative;
     transition: 0.5s;
 }
 
@@ -57,20 +58,38 @@ img{
 }
 
 .navbar a{
+    position: relative;
     color: #fff;
      padding: 10px 20px;
      margin: 0px 5px;
 }
 
-.navbar a:hover{
+/* .navbar a:hover{
     border-bottom: #28a745 4px solid;
+} */
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #28a745;
+    transition: all 0.5s;
 }
+
+.navbar a:hover::before{
+    width: 100%;
+
+}
+
 
 .navbar ul {
     display: flex; 
 }
 
-.navbar .logo{
+.navbar .logo i{
     font-weight: 400;
 }
 

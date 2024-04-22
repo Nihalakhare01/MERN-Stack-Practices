@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "figlet": "^1.7.0",
+    "link": "^2.1.0"
+  }
+}

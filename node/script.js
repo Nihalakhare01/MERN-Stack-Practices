@@ -15,7 +15,17 @@
 // console.log(val.pi);
 
 // const val = require("./fruits/index");
-const val = require("./fruits");
-console.log(val);
+// const val = require("./fruits");
+// console.log(val);
 
 
+const fig = require("figlet");
+
+fig("hello world  !!", function(err,data){
+    if(err){
+        console.log("something went wrong..");
+        console.dir(err);
+        return;
+    }
+    console.log(data);
+});

@@ -36,7 +36,9 @@ app.get("/posts/new", (req,res)=> {
 });
 
 app.post("/posts", (req,res)=> {
-    res.send("newjs"); 
+    let {username , content} = req.body;
+    posts.push({ username, content});
+    res.redirect("/posts"); 
 });
 
 app.listen(port, () => {

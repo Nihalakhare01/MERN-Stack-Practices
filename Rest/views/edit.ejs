@@ -9,8 +9,8 @@
     <h2>Edit yout post</h2>
     <p>Post id: <%= post.id %></p>
     <p>Post Username: <%= post.username %></p>
-    <form method="post" name="content" action="/posts/<%= post.id%>?_method=PATCH">
-        <textarea ><%= post.content %></textarea>
+    <form method="post" action="/posts/<%= post.id%>?_method=PATCH">
+        <textarea name="content"><%= post.content %></textarea>
         <button>Submit</button>
     </form>
 </body>

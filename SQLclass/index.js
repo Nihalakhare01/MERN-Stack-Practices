@@ -8,10 +8,32 @@ var connection = mysql.createConnection({
     database : "deltasql"
   });
 
+
+let getRandomUser = () =>  {
+    return [
+    faker.datatype.uuid(),
+    faker.internet.userName(),
+    faker.internet.email(),
+    faker.internet.password(),
+    ];
+  }
   
 
+  let q =  "INSERT INTO user (id, username, email, password) values ?";
+  //    let user = [
+  //     ["123b","123_userb", "ab@gmail.comb","abcb"],
+  //     ["123c","123_userc", "ab@gmail.comc","abcc"],
+  //    ];
+
+
+// data insering in bulk
+let data = [];
+for(i=0; i<50 ; i++){
+    data.push(getRandomUser());
+}
+
   try {
-    connection.query("SHOW TABLES", (err, results) => {
+    connection.query(q, [data], (err, results) => {
         if(err) throw err;
         console.log(results);
     });
@@ -19,14 +41,7 @@ var connection = mysql.createConnection({
     console.log(err);
   }
 
+  connection.end();
 
-let getRandomUser = () =>  {
-  return {
-    id: faker.datatype.uuid(),
-    username: faker.internet.userName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-  };
-}
 
 console.log(getRandomUser());

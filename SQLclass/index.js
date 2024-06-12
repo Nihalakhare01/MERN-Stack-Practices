@@ -91,12 +91,10 @@ app.patch("/user/:id", (req,res) => {
         let q2 = `UPDATE user SET username='${newUsername}' WHERE id='${id}'`;
           connection.query(q2 , (err,result) => {
           if(err) throw err; 
-          res.send(result);
-
+          res.redirect("/user");
         })
       }
-      res.send(user);
-        // res.render("edit.ejs", {user});
+        // res.render("edit.ejs", {user}); 
       });  
     }catch (err){
          console.log(err);
@@ -104,11 +102,9 @@ app.patch("/user/:id", (req,res) => {
     } 
 });
 
-
-
 app.listen(8080 , () => {
   console.log("Server is running on port 8080");
-});
+}); 
 
  // data inserting in bulk
 // let data = [];

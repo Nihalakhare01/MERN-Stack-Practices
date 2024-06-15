@@ -8,8 +8,8 @@
 </head>
 <body>
     <h3>All Chats!</h3>
-        <form action="" method="get">
-            <button>New Chat</button>
+        <form action="/chats/new" method="get">
+            <button>New Chat</button><br><br>
         </form>
 
 
@@ -18,9 +18,14 @@
             <p>From : <%= chat.from %></p>
                 <div class="msg">
                     <p> <%= chat.msg %></p>
+                    <form action="/chats/<%= chat._id%>/edit" method="get">
+                        <button>Edit</button>
+                    </form>
                 </div>
                 <p>Received by: <%= chat.to %></p>
                 <hr></hr>
+                <p>time: <%= chat.created_at.toString().split(" ")[4] %> <br></p>
+                <p>Date: <%= chat.created_at.toString().split(" ").slice(0,4).join("-") %> <br></p>
         </div>
         <br><br>
     <% } %>

@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const { type } = require("os");
 
-
 const chatschema = new mongoose.Schema({
     from : {
         type: String,
@@ -22,3 +21,5 @@ const chatschema = new mongoose.Schema({
 });
 
 const Chat = mongoose.model("Chat", chatschema);
+
+module.exports = Chat;

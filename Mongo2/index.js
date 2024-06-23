@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const Chat = require("./models/chat.js");
 const methodOverride = require("method-override");
+const Expresserr = require("./Expresserr")
 
 app.set("views", path.join(__dirname,"views"));
 app.set("view engine", "ejs");
@@ -29,8 +30,16 @@ app.get("/chats", async (req, res) => {
    res.render("index.ejs", {chats});
 });
 
+// Show route
+app.get("/chats/:id", async (req,res,next) => {
+    let {id} = req.params;
+    let chats = await Chat.findById(id);
+    res.render("edit.js" , {chat});
+});
+
 // New Route
 app.get("/chats/new", (req,res) =>{
+    throw new Expresserr(404, "page not Found!");
     res.render("new.ejs");
 }); 
 
@@ -85,6 +94,11 @@ app.delete("/chats/:id",  (req,res) => {
 
 app.get("/", (req, res) => {
     res.send("root is working");
+});
+
+app.use((err, req,res, next) => {
+    let {status = 500, message = "Some error Occured" } = err;
+    res.status(status).send(message);
 });
 
 app.listen(8080, () => {

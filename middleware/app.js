@@ -1,4 +1,5 @@
 const express = require("express");
+const expresserr = require("./expresserr");
 const app = express();
 
 // app.use((req,res,next) =>{
@@ -17,11 +18,15 @@ const checktoken = (req,res, next) => {
     if(token === "giveaccess"){
         next();
     }
-    res.send();
+    throw new expresserr(401, "ACCESS DENIED");
 };
 
 app.get("/api", checktoken, (req,res) => {
     res.send("data");
+});
+
+app.get("/err", (req,res) => {
+    abcd = abcd;
 });
 
 app.get("/", (req,res) =>{
@@ -30,6 +35,11 @@ app.get("/", (req,res) =>{
 
 app.get("/random", (req,res) =>{
     console.log("random page");
+});
+
+app.use((err,req,res,next) =>{
+   let {status = 500, message = "Some error Occured"} = err;
+   res.status(status).send(message);
 });
 
 app.listen(8080, () => {

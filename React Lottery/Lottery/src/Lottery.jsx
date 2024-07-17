@@ -27,7 +27,6 @@ export default function Lottery(){
             <br /><br />
             <h3>{iswinning && "congratulations, you won!"}</h3>
         </>
-
     );
 
 }
